@@ -13,6 +13,7 @@ import java.util.OptionalDouble;
 public class Serie {
     @Id //Chave primaria  = Long id;
     @GeneratedValue(strategy = GenerationType.IDENTITY) //Estrategia de geração desse ID, AUTO: O JPA(Java Persistence API)  decide qual é o melhor, IDENTITY auto incremental.
+
     private Long id;
 
     public Long getId() {
@@ -36,7 +37,8 @@ public class Serie {
     private String  sinopse;
 
     //@Transient //Deixa esse atributo de lado, @Transient identifica que não vai acontecer nada com esse atributo
-    @OneToMany(mappedBy = "serie", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "serie", cascade = CascadeType.ALL, fetch = FetchType.EAGER) //fetch = FetchType.EAGER diz como nossos relacionamentos são carregados ele busca pelas entidades mesma que não peça por elas(Busca Ansiosa)
+
     private List<Episodio> episodios = new ArrayList<>();
 
     public Serie(){
@@ -55,14 +57,16 @@ public class Serie {
 
     @Override
     public String toString() {
-        return "Serie: DadosSerie: " +
-                "titulo='" + titulo + '\'' +
+        return "Serie{" +
+                "id=" + id +
+                ", titulo='" + titulo + '\'' +
                 ", totalTemporadas=" + totalTemporadas +
                 ", avaliacao=" + avaliacao +
                 ", genero=" + genero +
                 ", atores='" + atores + '\'' +
                 ", poster='" + poster + '\'' +
                 ", sinopse='" + sinopse + '\'' +
+                ", episodios=" + episodios +
                 '}';
     }
 
@@ -123,6 +127,7 @@ public class Serie {
     }
 
     public void setEpisodios(List<Episodio> episodios) {
+        episodios.forEach(e -> e.setSerie(this));
         this.episodios = episodios;
     }
 }
