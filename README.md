@@ -15,3 +15,14 @@ Projeto desenvolvido no segundo curso da formação Avançando com Java da Alura
 - Conhecer vários tipos de banco de dados e utilizar o PostgreSQL;
 - Trabalhar com vários tipos de consultas ao banco de dados;
 - Aprofundar na interface JPARepository
+
+## Menu de Opções
+
+1. **Buscar séries**
+2. **Buscar episódios**
+3. **Listar séries buscadas**
+4. **Buscar série por título**
+5. **Buscar séries por ator**
+6. **Top 5 séries**
+0. **Sair**
+
