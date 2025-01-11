@@ -19,6 +19,12 @@ Projeto desenvolvido no segundo curso da formação Avançando com Java da Alura
 ## Menu de Opções
 
 ```text
+Game of Thrones avaliação: 9.2
+The Last of Us avaliação: 8.7
+The Boys avaliação: 8.7
+The Mandalorian avaliação: 8.6
+Gilmore Girls avaliação: 8.2
+
 1 - Buscar séries
 2 - Buscar episódios
 3 - Listar séries buscadas
