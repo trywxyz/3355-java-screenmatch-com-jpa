@@ -18,14 +18,14 @@ Projeto desenvolvido no segundo curso da formação Avançando com Java da Alura
 
 ## Menu de Opções
 
-Este é o menu principal do sistema, com as seguintes funcionalidades:
+```text
+1 - Buscar séries
+2 - Buscar episódios
+3 - Listar séries buscadas
+4 - Buscar série por título
+5 - Buscar séries por ator
+6 - Top 5 séries
+0 - Sair
 
-1. **Buscar séries** - Permite pesquisar séries por nome.
-2. **Buscar episódios** - Mostra episódios de uma série específica.
-3. **Listar séries buscadas** - Exibe as séries já pesquisadas.
-4. **Buscar série por título** - Busca uma série pelo título exato.
-5. **Buscar séries por ator** - Pesquisa séries relacionadas a um ator.
-6. **Top 5 séries** - Lista as 5 séries mais populares.
-0. **Sair** - Encerra o programa.
 
 
